@@ -1,0 +1,829 @@
+{
+	"info": {
+		"_postman_id": "9a418fab-834a-4186-af35-bb6d9ccdd38f",
+		"name": "Reserva - Salas v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Users Insecure",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9090/users-insecure",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"users-insecure"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Rooms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9090/rooms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9090/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Events by User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9090/events/users/5c31216b29367afe2159ea56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events",
+						"users",
+						"5c31216b29367afe2159ea56"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Reservations by Room",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9090/events/rooms/5c310d4ba352b767ac72fb46",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events",
+						"rooms",
+						"5c310d4ba352b767ac72fb46"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Room",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Room I\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/rooms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Victor\",\n    \"lastname\": \"Flores\",\n    \"email\": \"vflores@mail.com\",\n    \"username\": \"vflores\",\n    \"password\": \"vflores123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Event - Success - 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"5c351d1d76da2bbbe76edc5a\",\n    \"title\": \"Five\",\n    \"resourceId\": \"5c351d1276da2bbbe76edc52\",\n    \"overlap\": false,\n    \"start\": \"2018-12-30T08:00:00\",\n    \"end\": \"2018-12-30T09:00:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Event - Success 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"overlap\": false,\n    \"title\": \"hhhhhh\",\n    \"resourceId\": \"5c351d1276da2bbbe76edc55\",\n    \"user_id\": \"5c351d1d76da2bbbe76edc5c\",\n    \"start\": \"2019-01-08T09:00:00.000Z\",\n    \"end\": \"2019-01-08T10:00:00.000Z\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Event - Overlap",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"5c31216b29367afe2159ea54\",\n    \"title\": \"Five\",\n    \"resourceId\": \"5c264cc91dbe730d37e5a4b8\",\n    \"overlap\": false,\n    \"start\": \"2018-12-30T08:00:00\",\n    \"end\": \"2018-12-30T09:00:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Event - Invalid User - 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"no_existe\",\n    \"title\": \"Five\",\n    \"resourceId\": \"5c264cc91dbe730d37e5a4b8\",\n    \"overlap\": false,\n    \"start\": \"2018-12-30T08:00:00\",\n    \"end\": \"2018-12-30T09:00:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Event - Invalid User - 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"5c31216b29367afe2159ea54\",\n    \"title\": \"Five\",\n    \"resourceId\": \"5c31216b29367afe2159ea54\",\n    \"overlap\": false,\n    \"start\": \"2018-12-30T08:00:00\",\n    \"end\": \"2018-12-30T09:00:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Event - Invalid Room - 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"5c264cc91dbe730d37e5a4b8\",\n    \"title\": \"Five\",\n    \"resourceId\": \"5c264cc91dbe730d37e5a4b8\",\n    \"overlap\": false,\n    \"start\": \"2018-12-30T08:00:00\",\n    \"end\": \"2018-12-30T09:00:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Event - Start after End (Invalid)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"5c31216b29367afe2159ea54\",\n    \"title\": \"Five\",\n    \"resourceId\": \"5c310d4ba352b767ac72fb43\",\n    \"overlap\": false,\n    \"start\": \"2018-12-30T09:00:00\",\n    \"end\": \"2018-12-30T08:00:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Event - Invalid Date #1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"5c264cd31dbe730d37e5a4bf\",\n    \"title\": \"Invalid Event\",\n    \"resourceId\": \"5c264cc91dbe730d37e5a4b8\",\n    \"overlap\": false,\n    \"start\": \"Invalid Date\",\n    \"end\": \"Invalid Date\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Event - Invalid Date #2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"5c264cd31dbe730d37e5a4bf\",\n    \"title\": \"Invalid Event\",\n    \"resourceId\": \"5c264cc91dbe730d37e5a4b8\",\n    \"overlap\": false\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Event - Invalid without Start",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"5c264cd31dbe730d37e5a4bf\",\n    \"title\": \"Invalid Event\",\n    \"resourceId\": \"5c264cc91dbe730d37e5a4b8\",\n    \"overlap\": false\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Event -Success",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Cinco\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events/5c353547383ff78c6aea2f3d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events",
+						"5c353547383ff78c6aea2f3d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Event -Empty",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events/5c352156f0094d800f09b977",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events",
+						"5c352156f0094d800f09b977"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Event - Invalid Date #1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start\": \"Invalid date\",\n    \"end\": \"Invalid date\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events/5c352156f0094d800f09b977",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events",
+						"5c352156f0094d800f09b977"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Event - Invalid Room",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"resourceId\": \"Invalid room\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events/5c352156f0094d800f09b977",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events",
+						"5c352156f0094d800f09b977"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Event - Room OK",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"resourceId\": \"5c351d1276da2bbbe76edc52\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events/5c352156f0094d800f09b977",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events",
+						"5c352156f0094d800f09b977"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Event - User OK",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"5c351d1d76da2bbbe76edc5a\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events/5c352156f0094d800f09b977",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events",
+						"5c352156f0094d800f09b977"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Event - Invalid User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"Invalid user\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events/5c352156f0094d800f09b977",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events",
+						"5c352156f0094d800f09b977"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Event - Start after End - OK",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start\": \"2019-01-08T10:30:00.000Z\",\n    \"end\": \"2019-01-08T11:30:00.000Z\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events/5c352156f0094d800f09b977",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events",
+						"5c352156f0094d800f09b977"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Event - Start after End (invalid)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start\": \"2018-12-30T10:00:00.000Z\",\n    \"end\": \"2018-12-30T09:00:00.000Z\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events/5c353547383ff78c6aea2f3d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events",
+						"5c353547383ff78c6aea2f3d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Event - Start after End Overlap (invalid)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"resourceId\": \"5c351d1276da2bbbe76edc57\",\n    \"start\": \"2019-01-09T09:00:00.000Z\",\n    \"end\": \"2019-01-09T11:00:00.000Z\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events/5c352156f0094d800f09b977",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events",
+						"5c352156f0094d800f09b977"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Event - ID Event does not exist",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Invalid eventXXX\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/events/hola",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"events",
+						"hola"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

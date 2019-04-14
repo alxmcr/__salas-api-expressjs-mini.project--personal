@@ -1,0 +1,25 @@
+{
+  "name": "Salas-Backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "doc": "./node_modules/.bin/apidoc -i ./api/controllers/ -o _doc_api/APIDOCJS"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "moment": "^2.23.0",
+    "mongoose": "^5.4.0",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "apidoc": "^0.17.7",
+    "nodemon": "^1.18.9"
+  }
+}
